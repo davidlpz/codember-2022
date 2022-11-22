@@ -3,7 +3,7 @@ const MAX = 98123;
 let passwords = [];
 
 for (let i = MIN; i <= MAX; i++) {
-  let str = i + '';
+  let str = i.toString();
   if (str.replaceAll('5', '').length <= 3) {
     let num = str.split('').map(Number);
     if (+num.sort().join('') === i) {
