@@ -4,10 +4,11 @@ let passwords = [];
 
 for (let i = MIN; i <= MAX; i++) {
   let str = i.toString();
-  if (str.replaceAll('5', '').length <= 3) {
-    if (str.split('').sort().join('') === str) {
-      passwords.push(i);
-    }
+  if (
+    str.replaceAll('5', '').length <= 3 &&
+    str.split('').sort().join('') === str
+  ) {
+    passwords.push(i);
   }
 }
 
